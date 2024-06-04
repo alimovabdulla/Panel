@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace FirstProject.Areas.AdminPanel.Controllers
+namespace FirstContext1.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
     public class DashboardController : Controller

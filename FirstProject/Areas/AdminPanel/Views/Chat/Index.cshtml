@@ -1,6 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Index2";
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
 }
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1771,6 +1776,7 @@
                     </div>
                 </div>
             </footer>
+    <script src="~/js/sidebar-menu.js"></script>
         </div>
     </div>
     <!-- latest jquery-->
@@ -1782,15 +1788,14 @@
     <script src="~/js/icons/feather-icon/feather-icon.js"></script>
     <!-- scrollbar js-->
     <script src="~/js/scrollbar/simplebar.js"></script>
+    <script src="~/js/header-slick.js"></script>
     <script src="~/js/scrollbar/custom.js"></script>
     <!-- Sidebar jquery-->
     <script src="~/js/config.js"></script>
     <!-- Plugins JS start-->
-    <script src="~/js/sidebar-menu.js"></script>
     <script src="~/js/sidebar-pin.js"></script>
     <script src="~/js/slick/slick.min.js"></script>
     <script src="~/js/slick/slick.js"></script>
-    <script src="~/js/header-slick.js"></script>
     <!-- calendar js-->
     <script src="~/js/common-chat.js"></script>
     <script src="~/js/emoji-js/uikit.min.js"></script>

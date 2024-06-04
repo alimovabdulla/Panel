@@ -1,8 +1,9 @@
-﻿using FirstProject.Models;
+﻿
+using FirstProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace FirstProject.Controllers
+namespace FirstContext1.Controllers
 {
     public class HomeController : Controller
     {
