@@ -2,7 +2,7 @@
 
 namespace FirstContext1.Areas.AdminPanel.Controllers
 {
-    [Area("Chat")]
+    [Area("AdminPanel")]
     public class ChatController : Controller
     {
         public IActionResult Index()

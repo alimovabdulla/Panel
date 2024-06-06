@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc.Routing;
 namespace FirstContext1.Areas.AdminPanel.Controllers
 {
     
-    [Area("Login")]
+    [Area("AdminPanel")]
     public class LoginController : Controller
     {
          
         public IActionResult Index()
         {
-            return View( );
+            return View();
         }
     }
 }
