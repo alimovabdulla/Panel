@@ -16,6 +16,7 @@ namespace FirstContext1.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Index action called.");
             return View();
         }
 

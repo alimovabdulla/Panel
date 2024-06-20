@@ -1,4 +1,5 @@
 ﻿using FirstProject.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,11 +11,9 @@ namespace FirstProject.DataBase
         {
             
         }
-    
-    
-    
-    
-       public DbSet<AppUser> appUsers { get; set; }
+        
+
+        public DbSet<AppUser> appUsers { get; set; }
     
     
     

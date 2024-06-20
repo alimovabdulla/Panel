@@ -8,13 +8,15 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
  
-
 builder.Services.AddDbContext<ClassContext>(opt =>
 {
 
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+ 
 
 });
+
+
 builder.Services.AddIdentity<FirstProject.Entities.AppUser, IdentityRole>(opt =>
 {
 
@@ -41,9 +43,9 @@ builder.Services.AddCors(options =>
     });
 });
 builder.Services.AddSignalR(); // SignalR servislerini konteynere ekleyin
-
+ 
 var app = builder.Build();
-
+ 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -58,6 +60,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseCors();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 
@@ -70,4 +73,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapHub<ChatHub>("/chathub");
+
 app.Run();
