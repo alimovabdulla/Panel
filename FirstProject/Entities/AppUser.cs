@@ -4,6 +4,6 @@ namespace FirstProject.Entities
 {
     public class AppUser:IdentityUser
     {
-        public string Password { get; set; }
+         
     }
 }

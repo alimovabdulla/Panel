@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -42,17 +45,19 @@
                     <div>
                         <div><a class="logo" href="index.html"><img class="img-fluid for-dark" src="~/images/logo/logo.png" alt="looginpage"><img class="img-fluid for-light" src="~/images/logo/logo_dark.png" alt="looginpage"></a></div>
                         <div class="login-main">
-                            <form class="theme-form">
+                            <form method="post" class="theme-form">
                                 <h4>Sign in to account </h4>
                                 <p>Enter your email & password to login</p>
                                 <div class="form-group">
                                     <label class="col-form-label">Email Address</label>
-                                    <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                                    <input name="username" class="form-control" type="text" required="" placeholder="Test@gmail.com">
+                                </div>
+                                <div class="text-danger" asp-validation-summary="ModelOnly">
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Password </label>
                                     <div class="form-input position-relative">
-                                        <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                                        <input class="form-control" type="password" name="password" required="" placeholder="Sifreni bura YAzin">
                                         <div class="show-hide"> <span class="show"></span></div>
                                     </div>
                                 </div>
