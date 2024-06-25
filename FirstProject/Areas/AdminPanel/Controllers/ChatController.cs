@@ -8,6 +8,15 @@ namespace FirstContext1.Areas.AdminPanel.Controllers
         public IActionResult Index()
         {
             return View();
+        
+        
         }
+
+        public IActionResult Index(int a)
+        {
+            return View();
+        }
+
+
     }
 }
