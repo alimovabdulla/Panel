@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FirstProject.Migrations
 {
-    public partial class IdentityCreated : Migration
+    public partial class DatabaseCreated : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,6 +29,10 @@ namespace FirstProject.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OTP = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CheckOTP = table.Column<int>(type: "int", nullable: true),
+                    OTPtimer = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),

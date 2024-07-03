@@ -58,12 +58,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseCors();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
      "areas",
-             "{area:exists}/{controller=Dashboard}/{action=index}/{id?}");
+             "{area:exists}/{controller=Login}/{action=Login}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

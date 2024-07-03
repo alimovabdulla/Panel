@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FirstContext1.Areas.AdminPanel.Controllers
 {
-    [Area("AdminPanel")]
+     [Area("AdminPanel")]
     public class ChatController : Controller
     {
         public IActionResult Index()
@@ -12,10 +13,7 @@ namespace FirstContext1.Areas.AdminPanel.Controllers
         
         }
 
-        public IActionResult Index(int a)
-        {
-            return View();
-        }
+        
 
 
     }

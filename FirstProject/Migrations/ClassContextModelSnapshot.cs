@@ -230,9 +230,19 @@ namespace FirstProject.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
-                    b.Property<string>("Password")
+                    b.Property<int>("CheckOTP")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OTP")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OTPtimer")
+                        .HasColumnType("datetime2");
 
                     b.HasDiscriminator().HasValue("AppUser");
                 });

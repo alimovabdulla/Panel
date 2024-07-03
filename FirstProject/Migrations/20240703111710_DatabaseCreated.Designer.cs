@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstProject.Migrations
 {
     [DbContext(typeof(ClassContext))]
-    [Migration("20240606203347_IdentityCreated")]
-    partial class IdentityCreated
+    [Migration("20240703111710_DatabaseCreated")]
+    partial class DatabaseCreated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -231,6 +231,20 @@ namespace FirstProject.Migrations
             modelBuilder.Entity("FirstProject.Entities.AppUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<int>("CheckOTP")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OTP")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OTPtimer")
+                        .HasColumnType("datetime2");
 
                     b.HasDiscriminator().HasValue("AppUser");
                 });
