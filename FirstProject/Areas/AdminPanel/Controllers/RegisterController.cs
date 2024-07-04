@@ -7,8 +7,7 @@ using FirstProject.Entities;
 using FirstProject.DTOs.RegisterDTOs;
 namespace FirstProject.Areas.AdminPanel.Controllers
 {
-    [Authorize]
-
+ 
     [Area("AdminPanel")]
 
     public class RegisterController : Controller

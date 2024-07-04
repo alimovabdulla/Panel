@@ -6,7 +6,6 @@ using System.Diagnostics;
 
 namespace FirstContext1.Controllers
 {
-    [Authorize]
 
     public class HomeController : Controller
     {
